@@ -1,28 +1,30 @@
-<%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="container">
+  <%= simple_form_for @sea do |f| %>
+    
+    <%= f.input :name %>
 
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
+    
+    <%= f.input :temperature, as: :float %>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
+    
+    <%= f.input :bio, as: :text %>
 
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
+    
+    <%= f.input :image_url %>
 
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
+    
+    <%= f.input :mood %>
 
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
+    
+    <%= f.input :favorite_color %>
 
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
+    
+    <%= f.input :scariest_creature %>
 
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
+    
+    <%= f.input :has_mermaids, as: :check_boxes %>
 
-  <%=  f.submit %>
+    <%=  f.button :submit, class: "btn-primary" %>
 
   <% end %>
+</div>
