@@ -1,0 +1,19 @@
+<form>
+    <button type="submit" formaction="/seas">Back to Homepage</button>
+    <button type="submit" formaction="<%= sea_path(@sea) %>/edit">Edit this Sea</button>
+    <button type="submit" formaction="<%= sea_path(@sea) %>/delete">Delete this Sea</button>
+</form>
+
+<h1>The <%= @sea.name %> Sea</h1>
+
+<ul>
+    <img src="<%= @sea.image_url %>" alt"<%= @sea.name %> photo" style="height:300px;"><br>
+    <h3><%= @sea.bio %></h3><br>
+    <b>Temperature:</b> <%= @sea.temperature %><br>
+    <b>Mood:</b> <%= @sea.mood %><br>
+    <b>Favorite Color:</b> <%= @sea.favorite_color %><br>
+    <b>Scariest Creature:</b> <%= @sea.scariest_creature %><br>
+    <b>Contains Mermaids?</b> <%= @sea.has_mermaids %><br>
+</ul>
+
+<br><br><br>

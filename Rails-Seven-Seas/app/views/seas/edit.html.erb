@@ -1,27 +1,33 @@
+<form>
+  <button type="submit" formaction="/seas">Back to Homepage</button>
+</form>
+
+<h1>Editing: The <%= @sea.name %> Sea</h1><br>
+
 <%= form_for @sea do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name %><br>
 
   <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
+  <%= f.number_field :temperature %><br>
 
   <%= f.label :bio %>
-  <%= f.text_area :bio %>
+  <%= f.text_area :bio %><br>
 
   <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
+  <%= f.text_field :image_url %><br>
 
   <%= f.label :mood %>
-  <%= f.text_field :mood %>
+  <%= f.text_field :mood %><br>
 
   <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
+  <%= f.text_field :favorite_color %><br>
 
   <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
+  <%= f.text_field :scariest_creature %><br>
 
   <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
+  <%= f.check_box :has_mermaids %><br>
 
   <%=  f.submit %>
 
