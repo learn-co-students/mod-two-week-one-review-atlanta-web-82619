@@ -1,0 +1,11 @@
+<h1><u>The Seven Seas</u></h1>
+
+<ul>
+<% @seas.each do |sea| %>
+    <li><a href="/seas/<%= sea.id %>"><%= sea.name %></a></li><br>
+<% end %>
+</ul>
+
+<form>
+  <button type="submit" formaction="/seas/new">Add a Sea</button>
+</form>
